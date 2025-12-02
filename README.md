@@ -42,7 +42,10 @@ docker run -d \
 
 ```bash
 # Install dependencies
-pip install -r requirements.txt
+pip install .
+
+# Or with dev dependencies
+pip install -e ".[dev]"
 
 # Set environment variables
 export REDIS_URL=redis://localhost:6379/0

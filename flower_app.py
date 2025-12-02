@@ -13,6 +13,7 @@ Note: We don't autodiscover tasks here because:
 """
 
 import os
+
 from celery import Celery
 from dotenv import load_dotenv
 
@@ -21,8 +22,10 @@ load_dotenv()
 REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379/0")
 
 celery_app = Celery("tasks")
-celery_app.config_from_object({
-    "broker_url": REDIS_URL,
-    "result_backend": REDIS_URL,
-    "broker_connection_retry_on_startup": True,
-})
+celery_app.config_from_object(
+    {
+        "broker_url": REDIS_URL,
+        "result_backend": REDIS_URL,
+        "broker_connection_retry_on_startup": True,
+    }
+)

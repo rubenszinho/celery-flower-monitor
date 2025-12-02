@@ -1,5 +1,0 @@
-celery>=5.5.3
-flower>=2.0.1
-redis>=6.2.0
-python-dotenv>=1.1.0
-
