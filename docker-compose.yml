@@ -1,0 +1,18 @@
+services:
+  flower:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: celery_flower
+    ports:
+      - "127.0.0.1:${FLOWER_PORT:-5555}:5555"
+    restart: unless-stopped
+    environment:
+      REDIS_URL: ${REDIS_URL:-redis://host.docker.internal:6379/0}
+      PORT: 5555
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+# Note: This assumes Redis is running externally (on host or another network)
+# For local development, make sure Redis is accessible at the specified REDIS_URL
+
