@@ -2,6 +2,11 @@
 
 Lightweight, standalone Celery monitoring service using [Flower](https://flower.readthedocs.io/).
 
+### Deploy standalone
+[![Deploy standalone on Railway](https://railway.com/button.svg)](https://railway.com/deploy/celery-flower-w-auth?referralCode=5oF91f&utm_medium=integration&utm_source=template&utm_campaign=generic)
+### Deploy with the full Stack (Worker, Beat, Flower)
+[![Deploy with the full Stack (Worker, Beat, Flower) Railway](https://railway.com/button.svg)](https://railway.com/deploy/fastapi-celery-beat-worker-flower?referralCode=5oF91f&utm_medium=integration&utm_source=template&utm_campaign=generic)
+
 ## Features
 
 - Real-time task monitoring
